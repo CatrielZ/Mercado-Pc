@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>Productos</title>
+  </head>
+  <body>
+    <div class="fullscreen container-fluid">
+        <!---Navbar----> 
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../indext.html">Mercado Pc</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../indext.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="perfil.html">Perfil</a>
+                    </li>
+                    </ul>
+                </div>
+                <!-- BOTON DE CARRITO -->
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img src="../imagenes/carritoDeCompras.png" class="icon" height="23" width="24">
+                    <span id="cantidad" class="badge bg-primary">0</span>
+                </button>
+            </div>
+        </nav>
+        <!---Navbar---->
+        <div class="conteiner-fluid m-5">
+            <div class="conteiner">
+                <div class="col-12 text-center">
+                    <p class="fw-bold">PRODUCTOS</p>
+                    <hr>
+                </div>
+                <div class="m-5 col-12">
+                    <input id="filtroNombre" type="text" placeholder="Buscador">
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <div class="m-1">
+                            <p class="fw-bold">Categorias</p>
+                            <div class="ListaCategorias">
+                            </div>
+                            <!--Categorias-->
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex justify-content-between align-items-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                  Perifericos
+                                  </font></font><span class="badge  rounded-pill"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                  Mothers
+                                  </font></font><span class="badge  rounded-pill"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                    Gabinete
+                                    </font></font><span class="badge  rounded-pill"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></span>
+                                  </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                  Memorias
+                                  </font></font><span class="badge  rounded-pill"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></span>
+                                </li>
+                              </ul>
+                              <!-- Fin Categorias-->
+                        </div>
+                        <!--CREADOR DE PRODUCTOS-->
+                        <div class="conteiner m-2">
+                            <button class="mostrarMenu" onclick=" mostrarFormulario()">Agregar Producto</button>
+                            <div  id="menuAgregar" class="oculto">
+                                <form id="formularioPc">
+                                    <input id="nombre" onchange="productoGuardado(value,id)" class="m-1" type="text" value="" autocomplete="off" placeholder="Nombre">
+                                    <input id="precio" class="m-1" onchange="productoGuardado(value,id)" type="number" value="" autocomplete="off" placeholder="Precio ARG$">
+                                    <select id="categoria" class="form-select form-select-sm" aria-label=".form-select-sm example" onchange="productoGuardado(value,id)">
+                                        <option selected>Categorias</option>
+                                        <option value="Perifericos">Perifericos</option>
+                                        <option value="Mothers">Mothers</option>
+                                        <option value="Gabinetes">Gabinetes</option>
+                                        <option value="Memorias">Memorias</option>
+                                      </select>
+                                    <input id="btn" class="m-1"  type="submit" value="+">
+                                </form>
+                            </div>
+                        </div> 
+                        <!--CREADOR DE PRODUCTOS-->   
+                    </div>    
+                        <div id="conteinerListado" class="col-12 col-md-8">
+                                <!--Genera productos aca-->
+                        </div>
+                       
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--FOOTER-->
+    <footer>
+        <div class="conteiner m-5 conteinerFooter bg-light ">
+            <div class="row m-3">
+                <div class="col-12 col-md-4 ">
+                   <div class="px-5 my-5">
+                    <a class="navbar-brand" href="../indext.html">Mercado Pc</a>
+                   </div>
+                </div>
+                <div class="col-12 col-md-4 ">
+                    <div class="row mx-5">
+                        <p class="fw-bold"> NOSOTROS</p>
+                    </div>
+                    <div class="row mx-5">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci eos totam suscipit fugit, architecto alias fugiat</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="row mx-5 py-5">
+                        <div class="col-12 col-md-4">
+                            <img class ="icon" src="../imagenes/instagram.png" height="23" width="24" >
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <img class ="icon" src="../imagenes/facebook.png" height="23" width="24" >
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <img class ="icon" src="../imagenes/whatsapp.png" height="23" width="24" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FIN FOOTER-->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="productosCarrito" class="modal-body">
+              <!--carrito dinamico js-->
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary">Comprar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../js/productos.js"></script>
+    <script src="../js/globales.js"></script>
+    <script src="../js/funciones.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+  
+</html>

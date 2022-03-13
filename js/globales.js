@@ -1,0 +1,16 @@
+const categoria = ['Perifericos', 'Mothers', 'Gabinetes', 'Memorias'];
+const productos = [];
+const carrito = [];
+let nombreInput="";
+let precioInput = 0;
+let categoriaInput="";
+let formularioPc = document.getElementById('formularioPc')//Formulario
+let mostrarMenu = document.getElementsByClassName('mostrarMenu');//boton para que aparezca el formulario
+let periferico = document.getElementById("perifericos");
+let mothers = document.getElementById("mothers");
+let gabinetes = document.getElementById("gabinetes");
+let memorias = document.getElementById("memorias");
+let todos = document.getElementById("todos");
+const filtroNombre= document.getElementById('filtroNombre');
+const cantidadCarrito = document.getElementById('cantidad');
+const productosCarrito = document.getElementById('productosCarrito');
