@@ -1,4 +1,3 @@
-const categoria = ['Perifericos', 'Mothers', 'Gabinetes', 'Memorias'];
 const productos = [];
 const carrito = [];
 let nombreInput="";

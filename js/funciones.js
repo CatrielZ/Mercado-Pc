@@ -23,7 +23,7 @@ function productoHtml(productos,id){
         conteinerListado.append(listado);
          for (const producto of productos ) {
                 let divTarjeta = document.createElement('div');      
-                divTarjeta.innerHTML=  `<div class="card mb-3" style="max-width: 540px;">
+                divTarjeta.innerHTML=  `<div class="card mb-3 product-item" style="max-width: 540px"; category="${producto.categoria}">
                                         <div class="row g-0">
                                         <div class="col-md-4">
                                         <img src="../imagenes/noImg.png" class="img-fluid rounded-start" alt="imagenProducto">
@@ -110,3 +110,33 @@ function carritoHTML(lista){
                                 productosCarrito.append(prod);
         }
 }
+
+$(document).ready(function(){
+	// FILTRANDO PRODUCTOS  ============================================
+
+	$('.category_item').click(function(){
+		const catProduct = $(this).attr('category');
+		console.log(catProduct);
+
+		// OCULTANDO PRODUCTOS =========================
+		$('.product-item').css('transform', 'scale(0)');
+		function hideProduct(){
+			$('.product-item').hide();
+		} setTimeout(hideProduct,400);
+
+		// MOSTRANDO PRODUCTOS =========================
+		function showProduct(){
+			$('.product-item[category="'+catProduct+'"]').show();
+			$('.product-item[category="'+catProduct+'"]').css('transform', 'scale(1)');
+		} setTimeout(showProduct,400);
+	});
+
+	// MOSTRANDO TODOS LOS PRODUCTOS =======================
+
+	$('.category_item[category="all"]').click(function(){
+		function showAll(){
+			$('.product-item').show();
+			$('.product-item').css('transform', 'scale(1)');
+		} setTimeout(showAll,400);
+	});
+});
