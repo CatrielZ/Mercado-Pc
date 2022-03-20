@@ -12,17 +12,23 @@ fetch("../data/productos.json")
 })
 
 
-//local storage
-if("Productos" in localStorage){
-        const guardados = JSON.parse(localStorage.getItem('Productos'));
-        console.log(guardados);
-        for (const generado of guardados){
-                productos.push(new Producto(generado.nombre, generado.precio, generado.categoria));
 
-        }
-}
 productoHtml(productos,'conteinerListado');
+
+//CONFIMARCION DE COMPRA SWA
+localStorage.clear();
+carrito.splice(0,carrito.length);
 carritoHTML(carrito);
+confirmar.onclick=()=> {
+        Swal.fire(
+            'Compra realizada',
+            'Se ha realizado la compra',
+            'success'
+          )
+    
+    }
+
+
 
 
 

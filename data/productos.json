@@ -1,8 +1,8 @@
-[{"id":1,"nombre":"Teclado Gaming Shenlong KB8700","precio":42471,"categoria":"Perifericos","img":"http://dummyimage.com/150x.png/ff4444/ffffff","cantidad":1},
-{"id":2,"nombre":"Teclado Redragon Harpe K503-RGB Español","precio":72032,"categoria":"Perifericos","img":"http://dummyimage.com/150x.png/dddddd/000000","cantidad":2},
-{"id":3,"nombre":"Mother Gigabyte GA-A320M-S2H Ryzen 2da Gen Ready M-ATX","precio":5731,"categoria":"Mothers","img":"http://dummyimage.com/150x.png/cc0000/ffffff","cantidad":3},
-{"id":4,"nombre":"Teclado Marvo K656 Retroiluminado RGB","precio":2656,"categoria":"Perifericos","img":"http://dummyimage.com/150x.png/cc0000/ffffff","cantidad":4},
-{"id":5,"nombre":"Gabinete ASUS ROG STRIX Helios Aluminum Black RGB","precio":31737,"categoria":"Gabinetes","img":"http://dummyimage.com/150x.png/cc0000/ffffff","cantidad":5},
-{"id":6,"nombre":"Gabinete Kolink Void ARGB ATX Vidrio Templado","precio":59215,"categoria":"Gabinetes","img":"http://dummyimage.com/150x.png/dddddd/000000","cantidad":6},
-{"id":7,"nombre":"Memoria GeiL DDR4 8GB 3200MHz Orion RGB Red","precio":69297,"categoria":"Memorias","img":"http://dummyimage.com/150x.png/5fa2dd/ffffff","cantidad":7},
-{"id":8,"nombre":"Memoria GeiL DDR4 8GB 3200MHz EVO POTENZA RED","precio":47045,"categoria":"Memorias","img":"http://dummyimage.com/150x.png/cc0000/ffffff","cantidad":8}]
+[{"id":1,"nombre":"Teclado Gaming Shenlong KB8700","precio":42471,"categoria":"Perifericos","img":"https://http2.mlstatic.com/D_NQ_NP_711244-MLA43676267307_102020-O.webp","cantidad":1},
+{"id":2,"nombre":"Teclado Redragon Harpe K503-RGB Español","precio":72032,"categoria":"Perifericos","img":"https://http2.mlstatic.com/D_NQ_NP_676707-MLA45405201030_032021-O.webp","cantidad":2},
+{"id":3,"nombre":"Mother Gigabyte GA-A320M-S2H Ryzen 2da Gen Ready M-ATX","precio":5731,"categoria":"Mothers","img":"https://http2.mlstatic.com/D_NQ_NP_706862-MLA31115028775_062019-O.webp","cantidad":3},
+{"id":4,"nombre":"Teclado Marvo K656 Retroiluminado RGB","precio":2656,"categoria":"Perifericos","img":"https://http2.mlstatic.com/D_NQ_NP_890338-MLA46978405796_082021-O.webp","cantidad":4},
+{"id":5,"nombre":"Gabinete ASUS ROG STRIX Helios Aluminum Black RGB","precio":31737,"categoria":"Gabinetes","img":"https://http2.mlstatic.com/D_NQ_NP_833359-MLA48944040617_012022-O.webp","cantidad":5},
+{"id":6,"nombre":"Gabinete Kolink Void ARGB ATX Vidrio Templado","precio":59215,"categoria":"Gabinetes","img":"https://http2.mlstatic.com/D_NQ_NP_684655-MLA43249855264_082020-O.webp","cantidad":6},
+{"id":7,"nombre":"Memoria GeiL DDR4 8GB 3200MHz Orion RGB Red","precio":69297,"categoria":"Memorias","img":"https://http2.mlstatic.com/D_NQ_NP_979301-MLA42049914509_062020-O.webp","cantidad":7},
+{"id":8,"nombre":"Memoria GeiL DDR4 8GB 3200MHz EVO POTENZA RED","precio":47045,"categoria":"Memorias","img":"https://http2.mlstatic.com/D_NQ_NP_970749-MLA45537985672_042021-O.webp","cantidad":8}]
