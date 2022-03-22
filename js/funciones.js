@@ -90,20 +90,24 @@ function carritoHTML(lista){
         productosCarrito.innerHTML="";
         for (const producto of lista) {
                 let prod = document.createElement('div');
-                prod.innerHTML=`${producto.nombre}
-                                <span class="badge bg-warning text-dark">Precio:  $${producto.precio} </span>
-                                <span class="badge bg-primary">Cant:${producto.cantidad} </span>
-                                <span class="badge bg-dark">Subtotal: $${producto.subTotal()}</span>
-                                <a id="${producto.id}" class="btn btn-info btn-add">+</a>
-                                <a id="${producto.id}" class="btn btn-info btn-sub">-</a>
-                                <a id="${producto.id}" class="btn btn-info btn-delete">x</a>`
+                prod.setAttribute("class",'text-center fw-bold');
+                prod.innerHTML=`<img src="${producto.img}" class="img-fluid rounded-start" alt="imagenProducto">
+                                ${producto.nombre}
+                                <p class="text-center col-12 fw-bold">Precio:  $${producto.precio} </p>
+                                <p class="text-center col-12 fw-bold">Cantidad:${producto.cantidad} </p>
+                                <span class="badge bg-warning text-center col-12">Subtotal: $${producto.subTotal()}</span>
+                                <a id="${producto.id}" class="btn bg-primary text-white btn-info btn-add col-3">+</a>
+                                <a id="${producto.id}" class="btn bg-primary text-white btn-info btn-sub col-3">-</a>
+                                <a id="${producto.id}" class="btn bg-primary text-white btn-info btn-delete col-3">x</a>
+                                <div><hr><hr></div>`
                                 productosCarrito.append(prod);
         }
         document.querySelectorAll('.btn-delete').forEach(boton => boton.onclick = eliminarCarrito);
         document.querySelectorAll('.btn-add').forEach(boton => boton.onclick = addCarrito);
         document.querySelectorAll('.btn-sub').forEach(boton => boton.onclick = subCarrito);
         totalCarrito();
-} 
+}
+//Elimianr del carrito 
 function eliminarCarrito(e){
         let posicion = carrito.findIndex(producto => producto.id == e.target.id);
         carrito.splice(posicion,1);
@@ -111,11 +115,12 @@ function eliminarCarrito(e){
         localStorage.setitem('Carrito' , JSON.stringify(carrito));
 
 }
+//Agregar + cantidad al carrito
 function addCarrito (){
         let producto = carrito.find(p => p.id == this.id);
-        producto.agregarCantidad(1);
-        this.parentNode.children[1].innerHTML = "Cant: "+ producto.cantidad;
-        this.parentNode.children[2].innerHTML = "Subtotal: "+ producto.subTotal();
+        producto.agregarCantidad(2);
+        this.parentNode.children[2].innerHTML = "Cantidad: "+ producto.cantidad;
+        this.parentNode.children[3].innerHTML = "Subtotal: "+ producto.subTotal();
         totalCarrito();
         localStorage.setitem('Carrito' , JSON.stringify(carrito));
         
@@ -123,18 +128,20 @@ function addCarrito (){
         
 
 }
+//Quitar cantidad del carrito
 function  subCarrito(){
         let producto = carrito.find(p => p.id == this.id);
         if(producto.cantidad > 1){
                 producto.agregarCantidad(-1);
-                this.parentNode.children[1].innerHTML = "Cant: "+ producto.cantidad;
-                this.parentNode.children[2].innerHTML = "Subtotal: "+ producto.subTotal();
+                this.parentNode.children[2].innerHTML = "Cantidad: "+ producto.cantidad;
+                this.parentNode.children[3].innerHTML = "Subtotal: "+ producto.subTotal();
                 totalCarrito();
                 localStorage.setitem('Carrito' , JSON.stringify(carrito)); 
         }
         
 
 }
+//total del carrito
 function totalCarrito() {
         let total = carrito.reduce((totalCompra, actual) => totalCompra += actual.subTotal(), 0);
         totalCarritoInterfaz.innerHTML = "Total: $" + total;
@@ -171,3 +178,4 @@ $(document).ready(function(){
 		} setTimeout(showAll,400);
 	});
 });
+

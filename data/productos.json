@@ -5,4 +5,7 @@
 {"id":5,"nombre":"Gabinete ASUS ROG STRIX Helios Aluminum Black RGB","precio":31737,"categoria":"Gabinetes","img":"https://http2.mlstatic.com/D_NQ_NP_833359-MLA48944040617_012022-O.webp","cantidad":5},
 {"id":6,"nombre":"Gabinete Kolink Void ARGB ATX Vidrio Templado","precio":59215,"categoria":"Gabinetes","img":"https://http2.mlstatic.com/D_NQ_NP_684655-MLA43249855264_082020-O.webp","cantidad":6},
 {"id":7,"nombre":"Memoria GeiL DDR4 8GB 3200MHz Orion RGB Red","precio":69297,"categoria":"Memorias","img":"https://http2.mlstatic.com/D_NQ_NP_979301-MLA42049914509_062020-O.webp","cantidad":7},
-{"id":8,"nombre":"Memoria GeiL DDR4 8GB 3200MHz EVO POTENZA RED","precio":47045,"categoria":"Memorias","img":"https://http2.mlstatic.com/D_NQ_NP_970749-MLA45537985672_042021-O.webp","cantidad":8}]
+{"id":8,"nombre":"Memoria GeiL DDR4 8GB 3200MHz EVO POTENZA RED","precio":47045,"categoria":"Memorias","img":"https://http2.mlstatic.com/D_NQ_NP_970749-MLA45537985672_042021-O.webp","cantidad":8},
+{"id":9,"nombre":"Disco Externo SSD Seagate 500GB XBOX Negro USB 3.0","precio":17750,"categoria":"Memorias","img":"https://http2.mlstatic.com/D_NQ_NP_911758-MLA46665857404_072021-O.webp","cantidad":8},
+{"id":9,"nombre":"Auriculares HP HyperX Cloud Stinger","precio":4200,"categoria":"Perifericos","img":"https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_30963_Auriculares_HP_HyperX_Cloud_Stinger_PS5-PS4_Oficial_37191663-grn.jpg","cantidad":10},
+{"id":9,"nombre":"Mother ASUS PRIME B550M-A/CSM AM4","precio":17210,"categoria":"Mothers","img":"https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_20463_Mother_ASUS_PRIME_B550M-A_CSM_AM4_cb9d9823-grn.jpg","cantidad":4}]
