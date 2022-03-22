@@ -91,7 +91,7 @@ function carritoHTML(lista){
         for (const producto of lista) {
                 let prod = document.createElement('div');
                 prod.setAttribute("class",'text-center fw-bold');
-                prod.innerHTML=`<img src="${producto.img}" class="img-fluid rounded-start" alt="imagenProducto">
+                prod.innerHTML=`<img src="${producto.img}" class="img-fluid rounded-start col-12" alt="imagenProducto">
                                 ${producto.nombre}
                                 <p class="text-center col-12 fw-bold">Precio:  $${producto.precio} </p>
                                 <p class="text-center col-12 fw-bold">Cantidad:${producto.cantidad} </p>
